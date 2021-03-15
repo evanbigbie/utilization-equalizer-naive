@@ -43,12 +43,6 @@ int main() {
     cards[2].nickname = "AmEx";
     cards[3].nickname = "CapOne";
     
-// find L, the total of all limits
-    
-    for (int i=0; i<4; i++) {
-        L += cards[i].limit;
-    }
-    
 // read in current balances for each card
     
     cout << endl;
@@ -58,6 +52,12 @@ int main() {
         cout << "Enter " + cards[i].nickname + " balance: ";
         cin >> cards[i].old_balance;
         cout << endl;
+    }
+
+// find L, the total of all limits
+
+    for (int i=0; i<4; i++) {
+        L += cards[i].limit;
     }
     
 // calculate B, the total current balance
